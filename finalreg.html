@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> Registration Form  </title>
+    <link rel="stylesheet" href="style1.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form class="form">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">team_name</span>
+            <input type="text" placeholder="Enter your unique Team name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_1_name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team member 1 department </span>
+            <input type="text" placeholder="Enter your department" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_1_phone</span>
+            <input type="text" placeholder="Enter your phone" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">team_member_1_email</span>
+            <input type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_1_register_number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_2_name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team member_2_department </span>
+            <input type="text" placeholder="Enter your department" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_2_phone</span>
+            <input type="text" placeholder="Enter your phone" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">team_member_2_email</span>
+            <input type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_2_register number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_3_name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_3_department </span>
+            <input type="text" placeholder="Enter your department" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_3_phone</span>
+            <input type="text" placeholder="Enter your phone" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_3_email</span>
+            <input type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">team_member_3_register number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+const formEl = document.querySelector('.form');
+formEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(formEl);
+    const data = {};
+
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    fetch('https://web-it-like-spider.onrender.com/hackathon/register/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then((res) => res.json())
+    .then((response) => {
+        console.log('Registration successful:', response);
+        // You can handle the response here (e.g., show a success message)
+    })
+    .catch((error) => {
+        console.error('Registration failed:', error);
+        // Handle errors (e.g., show an error message)
+    });
+});
+</script>
+
+</body>
+</html>

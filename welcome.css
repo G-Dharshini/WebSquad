@@ -1,0 +1,109 @@
+body
+{
+	padding:0;
+	margin:0;
+}
+
+.container
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	height:100vh;
+	width:100vw;
+	background:#222;
+}
+
+span
+{
+	font-size:3cm;
+}
+
+.animation
+{
+	text-align:center;
+	text-transform:uppercase;
+	font-family:'roboto',sans-serif;
+	font-size:50px;
+	Letter-spacing:1px;
+	color:#fff;
+	display:inline-block;
+	animation:fadeIn 1.5s forwards;
+	opacity:0;
+	transition-timing-function:cubic-bezier(0.785,0.135,0.15,0.86);
+	background:#222;
+	z-index:1;
+	position:realtive;
+}
+
+.first{
+	display:inline-block;
+	animation:firstspan 1.5s forwards cubic-bezier(0.785,0.135,0.15,0.86);
+	background:#222;
+	z-index:1;
+	position:relative;
+	font-weight:500;
+}
+
+.slide
+{
+	display:inline-flex;
+	overflow:hidden;
+}
+
+.second
+{
+	font-weight:100;
+	z-index:-1;
+	display:inline-block;
+	animation:secondspan 1.5s forwards cubic-bezier(0.785,0.135,0.15,0.86);
+}
+
+@keyframes fadeIn{
+	0%
+	{
+		opacity:0;
+		transform:scale(1);
+	}
+	50%
+	{
+		opacity:1;
+		transform:scale(1.1);
+	}
+	100%
+	{
+		opacity:1;
+		transform:scale(1);
+	}
+}
+
+@keyframes firstspan{
+	0%
+	{
+		transform: translatex(50%);
+	}
+	60%
+	{
+		transform: translatex(50%);
+	}
+	100%
+	{
+		transform: translatex(0%);
+	}
+}
+
+keyframes secondspan{
+	0%
+	{
+		transform: translatex(-100%);
+	}
+	60%
+	{
+		transform:translatex(-100%);	
+	}
+	100%
+	{	
+		transform: translatex(0%);
+	}
+}

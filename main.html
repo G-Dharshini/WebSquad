@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="discount-container">
+    <!-- Timer container content -->
+    <div class="info">
+      <div class="discount-heading">HackFest Begins In</div>
+      <div class="discount-subheading">Timer</div>
+    </div>
+    <div class="countdown-timer">
+      <div class="group">
+        <div class="value days">00</div>
+        <div class="unit">Days</div>
+      </div>
+      <div class="group">
+        <div class="value hours">00</div>
+        <div class="unit">Hrs</div>
+      </div>
+      <div class="group">
+        <div class="value minutes">00</div>
+        <div class="unit">Min</div>
+      </div>
+      <div class="group">
+        <div class="value seconds">00</div>
+        <div class="unit">Sec</div>
+      </div>
+    </div>
+      <a href="finalreg.html" class="discount-btn">Register NOW</a>
+    <div class="close-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+
+
+     <h1 id="name" style="text-align: center;">Hack Name</h1>
+     <h1 style="text-align: center;">  Hackathon Contest</h1>
+     <h3 style="text-align: center;">Start date: 2023-08-26</h3>
+     <h3 style="text-align: center;">End date: 2023-08-26</h3>
+     <h3 style="text-align: center;">Registration start date: 2023-08-26</h3>
+    <h3 style="text-align: center;">Registration end date: 2023-08-26</h3>
+<div class="rounds">
+        <ul>
+            <li>
+                <div class="circle"></div>
+                <div class="date1">28.08.2023</div>
+                <div class="title">Round 1</div>
+                <p>This round is the first round to start the basic steps of your project</p>
+                <a href="#">Learn More</a>
+            </li>
+            <li>
+                <div class="circle"></div>
+                <div class="date2">01.09.2023</div>
+                <div class="title">Round 2</div>
+                <p>This round is the second round to implement your project</p>
+                <a href="#">Learn More</a>
+            </li>
+            <li>
+                <div class="circle"></div>
+                <div class="date3">08.09.2023</div>
+                <div class="title">Round 3</div>
+                <p>This round is the first round to start the basic steps of your project</p>
+                <a href="#">Learn More</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <h1 id="a" style="text-align: center;">Contact Us</h1>
+    <h2 id="b" style="text-align: center;"> Contactno:567897654 </h2>
+    <h2 id="c" style="text-align: center;"> Mail:hackathoninfo@gmail.com </h2>
+
+
+  <div class="sidebar_menu">
+
+
+        <div class="Logo">
+        <i class='bx bxl-slack icon'></i>
+          <div class="Text_Logo">HackFest lab</div>
+          <i class='bx bx-menu' id="Button" ></i>
+        </div>
+
+
+      <ul class="Nav_Item">
+          <li>
+              <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Search....">
+            <span class="Menu_btn">Search</span>
+          </li>
+
+        <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="Item_Name">Dashboard</span>
+        </a>
+          <span class="Menu_btn">Dashboard</span>
+        </li>
+      
+        <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="Item_Name">People</span>
+        </a>
+        <span class="Menu_btn">People</span>
+        </li>
+
+        <li>
+        <a href="#">
+        <i class='bx bxs-star-half'></i>
+        <span class="Item_Name">favorites</span>
+        </a>
+        <span class="Menu_btn">favorites</span>
+        </li>
+
+      <li>
+        <a href="#">
+        <i class='bx bx-trip'></i>
+        <span class="Item_Name">Workflows</span>
+        </a>
+        <span class="Menu_btn">Workflows</span>
+      </li>
+
+      <li>
+        <a href="#">
+        <i class='bx bx-volume-low'></i>
+          <span class="Item_Name">Updates</span>
+        </a>
+        <span class="Menu_btn">Updates</span>
+        </li>
+
+      <li>
+        <a href="#">
+        <i class='bx bxs-extension'></i>
+        <span class="Item_Name">Plug-ins</span>
+        </a>
+        <span class="Menu_btn">Plug-ins</span>
+        </li>
+
+        <li>
+        <a href="#">
+        <i class='bx bx-bell'></i>
+        <span class="Item_Name">Notifications</span>
+        </a>
+        <span class="Menu_btn">Notifications</span>
+        </li>
+
+    </ul>
+
+</div>
+
+    <script>
+       // JavaScript code for the countdown timer
+        const closeBtn = document.querySelector(".discount-container .close-btn");
+        const discountContainer = document.querySelector(".discount-container");
+
+        const days = document.querySelector(".countdown-timer .days");
+        const hours = document.querySelector(".countdown-timer .hours");
+        const minutes = document.querySelector(".countdown-timer .minutes");
+        const seconds = document.querySelector(".countdown-timer .seconds");
+
+        const countdownDate = new Date("2023-09-23T13:00:00").getTime();
+
+        const setCookie = (name, value, duration) => {
+          const expires = new Date();
+          expires.setTime(expires.getTime() + duration * 60 * 60 * 1000);
+          document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+        };
+
+        closeBtn.addEventListener("click", () => {
+          discountContainer.style.display = "none";
+          setCookie("discountClosed", "true", 24);
+        });
+
+        if (document.cookie.indexOf("discountClosed=true") !== -1) {
+          discountContainer.style.display = "none";
+        }
+
+        let t = setInterval(() => {
+          let now = new Date().getTime();
+          let distance = countdownDate - now;
+
+          let daysValue = Math.floor(distance / (1000 * 60 * 60 * 24))
+            .toString()
+            .padStart(2, "0");
+          let hoursValue = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          )
+            .toString()
+            .padStart(2, "0");
+          let minutesValue = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            .toString()
+            .padStart(2, "0");
+          let secondsValue = Math.floor((distance % (1000 * 60)) / 1000)
+            .toString()
+            .padStart(2, "0");
+
+          days.innerHTML = daysValue;
+          hours.innerHTML = hoursValue;
+          minutes.innerHTML = minutesValue;
+          seconds.innerHTML = secondsValue;
+
+          if (distance < 0) {
+            clearInterval(t);
+            discountContainer.style.display = "none";
+          }
+        }, 1000);
+
+        // JavaScript code for the sidebar menu
+        let sidebar = document.querySelector(".sidebar_menu");
+        let closeBtnSidebar = document.querySelector("#Button");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtnSidebar.addEventListener("click", () => {
+          sidebar.classList.toggle("open");
+          menuBtnChange();
+        });
+
+        searchBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("open");
+          menuBtnChange();
+        });
+
+        function menuBtnChange() {
+          if (sidebar.classList.contains("open")) {
+            closeBtnSidebar.classList.replace("bx-menu", "bxs-x-circle");
+          } else {
+            closeBtnSidebar.classList.replace("bxs-x-circle", "bx-menu");
+          }
+        }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

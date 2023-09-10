@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang= "en">
+  <head>
+  <meta charset="UTF-8">
+  <title>LOGIN PAGE</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <section>
+    <div class="box">
+      <span class= "borderLine"></span>
+      <form>
+        <h2>SIGN IN</h2>
+        <div class = "inputBox">
+	        <span>USERNAME</span> <br><br>
+	        <img src="user.png"><input type ="email" placeholder="Type your username" id="username"required="required">
+        </div>
+        <div class="inputBox">
+          <span>PASSWORD</span><br><br>
+	        <img src = "lok.png"><input type="password" placeholder="Type your password" id="password" required="required">
+        </div>
+        <div class = "links">
+          <a href ="#">Forget Password</a>
+        </div>
+        <button class="login-btn" onclick="func()"> LOGIN </button>
+      </form>
+    </div>
+    <script>
+	    function func()
+      {
+		    var email = document.getElementById("username").value;
+		    var pass = document.getElementById("password").value;
+		    if(email == 'sample@gmail.com' && pass=='123456')
+		    {
+			    window.open("main.html")
+		    }
+		    else{
+			    alert("INVALID !")
+		    }
+	    }
+    </script>
+  </section>
+</body>
+</html>
